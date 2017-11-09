@@ -1,0 +1,10 @@
+infant
+toddler one
+toddler
+kids
+teen
+adult
+family
+everyone
+preschool
+school age

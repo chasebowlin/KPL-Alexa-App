@@ -1,0 +1,85 @@
+{
+	"intents": [
+		{
+			"intent": "AMAZON.HelpIntent",
+			"slots": []
+		},
+
+		{
+			"intent": "AMAZON.CancelIntent",
+			"slots": []
+		},
+		{
+			"intent": "GetWeeklyHours",
+			"slots": [
+			{
+				"name": "Branch",
+				"type": "LIST_OF_BRANCHES"
+			}]
+		},
+
+		{
+			"intent": "GetCertainHours",
+			"slots": [
+			{
+				"name": "Branch",
+				"type": "LIST_OF_BRANCHES"
+			},
+			{
+				"name": "Day",
+				"type": "LIST_OF_DAYS_OF_THE_WEEK"
+			}]
+		},
+		{
+			"intent": "GetBranchAddress",
+			"slots": [
+			{
+				"name": "Branch",
+				"type": "LIST_OF_BRANCHES"
+			}]
+		},
+		{
+			"intent": "GetPhoneNumber",
+			"slots": [
+			{
+				"name": "Branch",
+				"type": "LIST_OF_BRANCHES"
+			}]
+		},
+		{
+			"intent": "GetUpcomingEvents",
+			"slots": []
+		},
+
+		{
+			"intent": "GetEventsForDate",
+			"slots": [
+			{
+				"name": "Date",
+				"type": "AMAZON.DATE"
+			}]
+		},
+
+		{
+			"intent": "GetEventForBranch",
+			"slots": [
+			{
+				"name": "Date",
+				"type": "AMAZON.DATE"
+			},
+			{
+				"name": "Branch",
+				"type": "LIST_OF_BRANCHES"
+			}]
+		},
+
+		{
+			"intent": "GetEventsForAgeGroup",
+			"slots": [
+			{
+				"name": "AgeGroup",
+				"type": "LIST_OF_AGE_GROUPS"
+			}]
+		}
+	]
+}

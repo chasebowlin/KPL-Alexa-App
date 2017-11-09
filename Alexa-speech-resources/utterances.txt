@@ -1,0 +1,139 @@
+AMAZON.HelpIntent help
+AMAZON.HelpIntent help me
+AMAZON.HelpIntent I need help
+AMAZON.HelpIntent get help
+AMAZON.HelpIntent what do you do
+AMAZON.HelpIntent what can you do
+AMAZON.HelpIntent what can I ask you
+AMAZON.HelpIntent what are your commands
+AMAZON.HelpIntent what commands can I say
+AMAZON.HelpIntent what commands can I ask
+AMAZON.HelpIntent what commands can I ask you
+AMAZON.HelpIntent what is your purpose
+AMAZON.HelpIntent do you swear
+
+
+AMAZON.CancelIntent exit
+AMAZON.CancelIntent quit
+AMAZON.CancelIntent shut up
+AMAZON.CancelIntent stop
+AMAZON.CancelIntent don't
+AMAZON.CancelIntent cancel
+AMAZON.CancelIntent I'm done
+AMAZON.CancelIntent I am done
+AMAZON.CancelIntent bye
+AMAZON.CancelIntent goodbye
+AMAZON.CancelIntent stop it
+
+
+GetWeeklyHours what are the hours for {Branch}
+GetWeeklyHours when is {Branch} open
+GetWeeklyHours when will {Branch} be open
+GetWeeklyHours hours for {Branch}
+GetWeeklyHours what are {Branch} hours
+GetWeeklyHours hours for {Branch}
+GetWeeklyHours {Branch} hours
+GetWeeklyHours {Branch} weekly hours
+GetWeeklyHours {Branch} hours of operation
+GetWeeklyHours hours of operation for {Branch}
+
+GetCertainHours is {Branch} open on {Day}
+GetCertainHours	when is {Branch} open {Day}
+GetCertainHours	when is {Branch} open on {Day}
+GetCertainHours	{Branch} {Day} hours
+GetCertainHours	{Branch} {Day}
+GetCertainHours	hours for {Branch} on {Day}
+GetCertainHours	what are the hours for {Branch} on {Day}
+GetCertainHours	what are the hours on {Day} for {Branch}
+GetCertainHours	hours of operation on {Day} for {Branch}
+GetCertainHours	hours on {Day} for {Branch}
+GetCertainHours	tell me the hours for {Branch} on {Day}
+GetCertainHours	{Day} {Branch} hours
+
+GetBranchAddress what is the address for {Branch}
+GetBranchAddress address for {Branch}
+GetBranchAddress {Branch} address
+GetBranchAddress what is the address
+GetBranchAddress where is {Branch}
+GetBranchAddress how do I get to {Branch}
+
+GetPhoneNumber what is the phone number
+GetPhoneNumber phone number
+GetPhoneNumber the phone number for {Branch}
+GetPhoneNumber what is the phone number for {Branch}
+GetPhoneNumber what is the number
+GetPhoneNumber number
+GetPhoneNumber what is the number for {Branch}
+GetPhoneNumber the number for {Branch}
+
+GetUpcomingEvents events coming up
+GetUpcomingEvents upcoming events
+GetUpcomingEvents what are some upcoming events
+GetUpcomingEvents is there any upcoming events
+GetUpcomingEvents events that are happening soon
+GetUpcomingEvents all the events coming up
+GetUpcomingEvents is there anything going on soon
+GetUpcomingEvents what is happening soon
+GetUpcomingEvents events
+GetUpcomingEvents things to do
+GetUpcomingEvents what are some things to do
+GetUpcomingEvents what are some events
+GetUpcomingEvents do you know of any events
+GetUpcomingEvents what are some events coming up
+GetUpcomingEvents any events coming up
+GetUpcomingEvents anything going on 
+GetUpcomingEvents what is going on
+GetUpcomingEvents give me events coming up
+
+
+GetEventsForDate events coming up on {Date}
+GetEventsForDate upcoming events for {Date}
+GetEventsForDate upcoming events on {Date}
+GetEventsForDate what are some upcoming events on {Date}
+GetEventsForDate is there any upcoming events on {Date}
+GetEventsForDate events that are happening soon on {Date}
+GetEventsForDate all the events coming up for {Date}
+GetEventsForDate all the events coming up on {Date}
+GetEventsForDate is there anything going on during {Date}
+GetEventsForDate what is happening on {Date}
+GetEventsForDate events for {Date}
+GetEventsForDate events on {Date}
+GetEventsForDate things to do on {Date}
+GetEventsForDate things to do for {Date}
+GetEventsForDate what are some things to do {Date}
+GetEventsForDate what are some things to do on {Date}
+GetEventsForDate what are some things to do for {Date}
+GetEventsForDate what are some events on {Date}
+GetEventsForDate what are some events {Date}
+GetEventsForDate do you know of any events for {Date}
+GetEventsForDate do you know of any events on {Date}
+GetEventsForDate what are some events coming up on {Date}
+GetEventsForDate any events coming up during {Date}
+GetEventsForDate anything going on during {Date}
+GetEventsForDate what is going on during {Date}
+GetEventsForDate give me events coming up on {Date}
+GetEventsForDate give me events coming up for {Date}
+GetEventsForDate {Date} events
+
+
+GetEventForBranch events at {Branch}
+GetEventForBranch upcoming events at {Branch}
+GetEventForBranch what are the events for {Branch}
+GetEventForBranch is there any events for {Branch}
+GetEventForBranch is there any events happening at {Branch}
+GetEventForBranch what is happening at {Branch}
+GetEventForBranch {Branch} events
+GetEventForBranch activities at {Branch}
+
+
+GetEventsForAgeGroup events for {AgeGroup}
+GetEventsForAgeGroup what events are there for {AgeGroup}
+GetEventsForAgeGroup things to do for {AgeGroup}
+GetEventsForAgeGroup events for {AgeGroup}
+GetEventsForAgeGroup some evetns for {AgeGroup}
+GetEventsForAgeGroup things to do for {AgeGroup}
+GetEventsForAgeGroup what is going on for {AgeGroup}
+GetEventsForAgeGroup anything happening for {AgeGroup}
+GetEventsForAgeGroup upcoming events for {AgeGroup}
+GetEventsForAgeGroup	what are some upcoming events for {AgeGroup}
+GetEventsForAgeGroup is there any events for {AgeGroup}
