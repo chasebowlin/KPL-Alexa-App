@@ -137,3 +137,370 @@ GetEventsForAgeGroup anything happening for {AgeGroup}
 GetEventsForAgeGroup upcoming events for {AgeGroup}
 GetEventsForAgeGroup	what are some upcoming events for {AgeGroup}
 GetEventsForAgeGroup is there any events for {AgeGroup}
+
+
+StartSearch start search
+StartSearch search for {Animal}
+StartSearch search for {Athlete}
+StartSearch search for {Author}
+StartSearch search for {City}
+StartSearch search for {Comic}
+StartSearch search for {Country}
+StartSearch search for {Festival}
+StartSearch search for {FictionalCharacter}
+StartSearch search for {Game}
+StartSearch search for {Genre}
+StartSearch search for {Landform}
+StartSearch search for {Language}
+StartSearch search for {Movie}
+StartSearch search for {MusicAlbum}
+StartSearch search for {MusicGroup}
+StartSearch search for {MusicRecording}
+StartSearch search for {Musician}
+StartSearch search for {Organization}
+StartSearch search for {Person}
+StartSearch search for {Region}
+StartSearch search for {Sport}
+StartSearch search for {SportsEvent}
+StartSearch search for {SportsTeam}
+StartSearch search for {UsState}
+StartSearch begin a search for {Animal}
+StartSearch begin a search for {Athlete}
+StartSearch begin a search for {Author}
+StartSearch begin a search for {City}
+StartSearch begin a search for {Comic}
+StartSearch begin a search for {Country}
+StartSearch begin a search for {Festival}
+StartSearch begin a search for {FictionalCharacter}
+StartSearch begin a search for {Game}
+StartSearch begin a search for {Genre}
+StartSearch begin a search for {Landform}
+StartSearch begin a search for {Language}
+StartSearch begin a search for {Movie}
+StartSearch begin a search for {MusicAlbum}
+StartSearch begin a search for {MusicGroup}
+StartSearch begin a search for {MusicRecording}
+StartSearch begin a search for {Musician}
+StartSearch begin a search for {Organization}
+StartSearch begin a search for {Person}
+StartSearch begin a search for {Region}
+StartSearch begin a search for {Sport}
+StartSearch begin a search for {SportsEvent}
+StartSearch begin a search for {SportsTeam}
+StartSearch begin a search for {UsState}
+StartSearch check to see if {Animal} is available
+StartSearch check to see if {Athlete} is available
+StartSearch check to see if {Author} is available
+StartSearch check to see if {City} is available
+StartSearch check to see if {Comic} is available
+StartSearch check to see if {Country} is available
+StartSearch check to see if {Festival} is available
+StartSearch check to see if {FictionalCharacter} is available
+StartSearch check to see if {Game} is available
+StartSearch check to see if {Genre} is available
+StartSearch check to see if {Landform} is available
+StartSearch check to see if {Language} is available
+StartSearch check to see if {Movie} is available
+StartSearch check to see if {MusicAlbum} is available
+StartSearch check to see if {MusicGroup} is available
+StartSearch check to see if {MusicRecording} is available
+StartSearch check to see if {Musician} is available
+StartSearch check to see if {Organization} is available
+StartSearch check to see if {Person} is available
+StartSearch check to see if {Region} is available
+StartSearch check to see if {Sport} is available
+StartSearch check to see if {SportsEvent} is available
+StartSearch check to see if {SportsTeam} is available
+StartSearch check to see if {UsState} is available
+
+
+GetFormatType {Format}
+GetFormatType it is {Format}
+GetFormatType it is a {Format}
+GetFormatType it's a {Format}
+
+
+GetItemCategory {ItemCategory}
+GetItemCategory it is {ItemCategory}
+GetItemCategory it is a {ItemCategory} book
+GetItemCategory it's {ItemCategory}
+GetItemCategory it's a {ItemCategory} book
+
+
+GetLanguage {Language}
+GetLanguage it is in {Language}
+GetLanguage I want {Language} copy
+GetLanguage I think {Language}
+
+
+startSearchTwoItems begin search for a {Format} about {Animal}
+startSearchTwoItems begin search for a {Format} about {Author}
+startSearchTwoItems begin search for a {Format} about {Book}
+startSearchTwoItems begin search for a {Format} about {City}
+startSearchTwoItems begin search for a {Format} about {Comic}
+startSearchTwoItems begin search for a {Format} about {Country}
+startSearchTwoItems begin search for a {Format} about {Festival}
+startSearchTwoItems begin search for a {Format} about {FictionalCharacter}
+startSearchTwoItems begin search for a {Format} about {Game}
+startSearchTwoItems begin search for a {Format} about {Genre}
+startSearchTwoItems begin search for a {Format} about {Landform}
+startSearchTwoItems begin search for a {Format} about {Language}
+startSearchTwoItems begin search for a {Format} about {Movie}
+startSearchTwoItems begin search for a {Format} about {MusicAblum}
+startSearchTwoItems begin search for a {Format} about {MusicGroup}
+startSearchTwoItems begin search for a {Format} about {MusicRecording}
+startSearchTwoItems begin search for a {Format} about {Musician}
+startSearchTwoItems begin search for a {Format} about {Organization}
+startSearchTwoItems begin search for a {Format} about {Person}
+startSearchTwoItems begin search for a {Format} about {Region}
+startSearchTwoItems begin search for a {Format} about {Sport}
+startSearchTwoItems begin search for a {Format} about {SportsEvent}
+startSearchTwoItems begin search for a {Format} about {SportsTeam}
+startSearchTwoItems begin search for a {Format} about {UsState}
+startSearchTwoItems begin search for a {Format} by {Author}
+startSearchTwoItems begin search for a {Format} by {MusicGroup}
+startSearchTwoItems begin search for a {Format} by {Musician}
+startSearchTwoItems begin search for a {Format} by {Person}
+startSearchTwoItems begin search for a {Format} from {Author}
+startSearchTwoItems begin search for a {Format} from {MusicGroup}
+startSearchTwoItems begin search for a {Format} from {Musician}
+startSearchTwoItems begin search for a {Format} from {Person}
+startSearchTwoItems begin search for a {Format} with the title {Book}
+startSearchTwoItems begin search for a {Format} with the title {City}
+startSearchTwoItems begin search for a {Format} with the title {Comic}
+startSearchTwoItems begin search for a {Format} with the title {Country}
+startSearchTwoItems begin search for a {Format} with the title {Festival}
+startSearchTwoItems begin search for a {Format} with the title {Landform}
+startSearchTwoItems begin search for a {Format} with the title {Movie}
+startSearchTwoItems begin search for a {Format} with the title {Person}
+startSearchTwoItems begin search for a {Format} with the title {Organization}
+startSearchTwoItems begin search for a {Format} with the title {Region}
+startSearchTwoItems begin search for a {Format} with the title {Sport}
+startSearchTwoItems begin search for a {Format} with the title {UsState}
+startSearchTwoItems begin search for a {Format} with the title {MusicAlbum}
+startSearchTwoItems begin search for a {Format} with the title {MusicRecording}
+startSearchTwoItems check to see if a {Format} about {Animal} is available
+startSearchTwoItems check to see if a {Format} about {Athlete} is available
+startSearchTwoItems check to see if a {Format} about {Author} is available
+startSearchTwoItems check to see if a {Format} about {Book} is available
+startSearchTwoItems check to see if a {Format} about {City} is available
+startSearchTwoItems check to see if a {Format} about {Comic} is available
+startSearchTwoItems check to see if a {Format} about {Country} is available
+startSearchTwoItems check to see if a {Format} about {Festival} is available
+startSearchTwoItems check to see if a {Format} about {FictionalCharacter} is available
+startSearchTwoItems check to see if a {Format} about {Game} is available
+startSearchTwoItems check to see if a {Format} about {Genre} is available
+startSearchTwoItems check to see if a {Format} about {Landform} is available
+startSearchTwoItems check to see if a {Format} about {Language} is available
+startSearchTwoItems check to see if a {Format} about {Movie} is available
+startSearchTwoItems check to see if a {Format} about {MusicAlbum} is available
+startSearchTwoItems check to see if a {Format} about {MusicGroup} is available
+startSearchTwoItems check to see if a {Format} about {MusicRecording} is available
+startSearchTwoItems check to see if a {Format} about {Musician} is available
+startSearchTwoItems check to see if a {Format} about {Organization} is available
+startSearchTwoItems check to see if a {Format} about {Person} is available
+startSearchTwoItems check to see if a {Format} about {Region} is available
+startSearchTwoItems check to see if a {Format} about {Sport} is available
+startSearchTwoItems check to see if a {Format} about {SportsEvent} is available
+startSearchTwoItems check to see if a {Format} about {SportsTeam} is available
+startSearchTwoItems check to see if a {Format} about {UsState} is available
+startSearchTwoItems check for a {Format} about {Animal} is available
+startSearchTwoItems check for a {Format} about {Athlete} is available
+startSearchTwoItems check for a {Format} about {Author} is available
+startSearchTwoItems check for a {Format} about {Book} is available
+startSearchTwoItems check for a {Format} about {City} is available
+startSearchTwoItems check for a {Format} about {Comic} is available
+startSearchTwoItems check for a {Format} about {Country} is available
+startSearchTwoItems check for a {Format} about {Festival} is available
+startSearchTwoItems check for a {Format} about {FictionalCharacter} is available
+startSearchTwoItems check for a {Format} about {Game} is available
+startSearchTwoItems check for a {Format} about {Genre} is available
+startSearchTwoItems check for a {Format} about {Landform} is available
+startSearchTwoItems check for a {Format} about {Language} is available
+startSearchTwoItems check for a {Format} about {Movie} is available
+startSearchTwoItems check for a {Format} about {MusicAlbum} is available
+startSearchTwoItems check for a {Format} about {MusicGroup} is available
+startSearchTwoItems check for a {Format} about {MusicRecording} is available
+startSearchTwoItems check for a {Format} about {Musician} is available
+startSearchTwoItems check for a {Format} about {Organization} is available
+startSearchTwoItems check for a {Format} about {Person} is available
+startSearchTwoItems check for a {Format} about {Region} is available
+startSearchTwoItems check for a {Format} about {Sport} is available
+startSearchTwoItems check for a {Format} about {SportsEvent} is available
+startSearchTwoItems check for a {Format} about {SportsTeam} is available
+startSearchTwoItems check for a {Format} about {UsState} is available
+startSearchTwoItems check for a {Format} with the title {Book} is available
+startSearchTwoItems check for a {Format} with the title {City} is available
+startSearchTwoItems check for a {Format} with the title {Comic} is available
+startSearchTwoItems check for a {Format} with the title {Country} is available
+startSearchTwoItems check for a {Format} with the title {Festival} is available
+startSearchTwoItems check for a {Format} with the title {Landform} is available
+startSearchTwoItems check for a {Format} with the title {Movie} is available
+startSearchTwoItems check for a {Format} with the title {Person} is available
+startSearchTwoItems check for a {Format} with the title {Organization} is available
+startSearchTwoItems check for a {Format} with the title {Region} is available
+startSearchTwoItems check for a {Format} with the title {Sport} is available
+startSearchTwoItems check for a {Format} with the title {UsState} is available
+startSearchTwoItems check for a {Format} with the title {MusicAlbum} is available
+startSearchTwoItems check for a {Format} with the title {MusicRecording} is available
+startSearchTwoItems check for a {Format} by {Author} is available
+startSearchTwoItems check for a {Format} by {MusicGroup} is available
+startSearchTwoItems check for a {Format} by {Musician} is available
+startSearchTwoItems check for a {Format} by {Person} is available
+startSearchTwoItems check for a {Format} from {Author} is available
+startSearchTwoItems check for a {Format} from {MusicGroup} is available
+startSearchTwoItems check for a {Format} from {Musician} is available
+startSearchTwoItems check for a {Format} from {Person} is available
+startSearchTwoItems look for a {Format} with the title {Animal}
+startSearchTwoItems look for a {Format} with the title {Athlete}
+startSearchTwoItems look for a {Format} with the title {Author}
+startSearchTwoItems look for a {Format} with the title {City}
+startSearchTwoItems look for a {Format} with the title {Comic}
+startSearchTwoItems look for a {Format} with the title {Animal} is available
+startSearchTwoItems look for a {Format} with the title {Athlete} is available
+startSearchTwoItems look for a {Format} with the title {Author} is available
+startSearchTwoItems look for a {Format} with the title {Book} is available
+startSearchTwoItems look for a {Format} with the title {City} is available
+startSearchTwoItems look for a {Format} with the title {Comic} is available
+startSearchTwoItems look for a {Format} with the title {Country} is available
+startSearchTwoItems look for a {Format} with the title {Festival} is available
+startSearchTwoItems look for a {Format} with the title {FictionalCaracter} is available
+startSearchTwoItems look for a {Format} with the title {Game} is available
+startSearchTwoItems look for a {Format} with the title {Genre} is available
+startSearchTwoItems look for a {Format} with the title {Landform} is available
+startSearchTwoItems look for a {Format} with the title {Language} is available
+startSearchTwoItems look for a {Format} with the title {Movie} is available
+startSearchTwoItems look for a {Format} with the title {MusicAlbum} is available
+startSearchTwoItems look for a {Format} with the title {MusicGroup} is available
+startSearchTwoItems look for a {Format} with the title {MusicRecording} is available
+startSearchTwoItems look for a {Format} with the title {Musician} is available
+startSearchTwoItems look for a {Format} with the title {Organization} is available
+startSearchTwoItems look for a {Format} with the title {Person} is available
+startSearchTwoItems look for a {Format} with the title {Sport} is available
+startSearchTwoItems look for a {Format} with the title {SportsEvent} is available
+startSearchTwoItems look for a {Format} with the title {SportsTeam} is available
+startSearchTwoItems look for a {Format} with the title {SportsEvent} is available
+startSearchTwoItems look for a {Format} with the title {UsState} is available
+startSearchTwoItems are there any {Format} about {Animal}
+startSearchTwoItems are there any {Format} about {Athelete}
+startSearchTwoItems are there any {Format} about {Author}
+startSearchTwoItems are there any {Format} about {Book}
+startSearchTwoItems are there any {Format} about {City}
+startSearchTwoItems are there any {Format} about {Comic}
+startSearchTwoItems are there any {Format} about {Country}
+startSearchTwoItems are there any {Format} about {Festival}
+startSearchTwoItems are there any {Format} about {FictionalCharacter}
+startSearchTwoItems are there any {Format} about {Game}
+startSearchTwoItems are there any {Format} about {Genre}
+startSearchTwoItems are there any {Format} about {Landform}
+startSearchTwoItems are there any {Format} about {Language}
+startSearchTwoItems are there any {Format} about {Movie}
+startSearchTwoItems are there any {Format} about {MusicAlbum}
+startSearchTwoItems are there any {Format} about {MusicGroup}
+startSearchTwoItems are there any {Format} about {MusicRecording}
+startSearchTwoItems are there any {Format} about {Musician}
+startSearchTwoItems are there any {Format} about {Organization}
+startSearchTwoItems are there any {Format} about {Person}
+startSearchTwoItems are there any {Format} about {Region}
+startSearchTwoItems are there any {Format} about {Sport}
+startSearchTwoItems are there any {Format} about {SportsEvent}
+startSearchTwoItems are there any {Format} about {SportsTeam}
+startSearchTwoItems are there any {Format} about {UsState}
+startSearchTwoItems are there any {Format} about {Animal} available
+startSearchTwoItems are there any {Format} about {Author} available
+startSearchTwoItems are there any {Format} about {Athelete} available
+startSearchTwoItems are there any {Format} about {Book} available
+startSearchTwoItems are there any {Format} about {City} available
+startSearchTwoItems are there any {Format} about {Country} available
+startSearchTwoItems are there any {Format} about {Festival} available
+startSearchTwoItems are there any {Format} about {FictionalCharacter} available
+startSearchTwoItems are there any {Format} about {Game} available
+startSearchTwoItems are there any {Format} about {Genre} available
+startSearchTwoItems are there any {Format} about {Landform} available
+startSearchTwoItems are there any {Format} about {Language} available
+startSearchTwoItems are there any {Format} about {Movie} available
+startSearchTwoItems are there any {Format} about {MusicAlbum} available
+startSearchTwoItems are there any {Format} about {MusicGroup} available
+startSearchTwoItems are there any {Format} about {MusicRecording} available
+startSearchTwoItems are there any {Format} about {Musician} available
+startSearchTwoItems are there any {Format} about {Organization} available
+startSearchTwoItems are there any {Format} about {Person} available
+startSearchTwoItems are there any {Format} about {Region} available
+startSearchTwoItems are there any {Format} about {Sport} available
+startSearchTwoItems are there any {Format} about {SportsEvent} available
+startSearchTwoItems are there any {Format} about {SportsTeam} available
+startSearchTwoItems are there any {Format} about {UsState} available
+startSearchTwoItems are there any {Format} with the title {Animal}
+startSearchTwoItems are there any {Format} with the title {Author}
+startSearchTwoItems are there any {Format} with the title {Author}
+startSearchTwoItems are there any {Format} with the title {Book}
+startSearchTwoItems are there any {Format} with the title {City}
+startSearchTwoItems are there any {Format} with the title {Comic}
+startSearchTwoItems are there any {Format} with the title {Country}
+startSearchTwoItems are there any {Format} with the title {Festival}
+startSearchTwoItems are there any {Format} with the title {FictionalCharacter}
+startSearchTwoItems are there any {Format} with the title {Game}
+startSearchTwoItems are there any {Format} with the title {Genre}
+startSearchTwoItems are there any {Format} with the title {Landform}
+startSearchTwoItems are there any {Format} with the title {Language}
+startSearchTwoItems are there any {Format} with the title {Movie}
+startSearchTwoItems are there any {Format} with the title {MusicAlbum}
+startSearchTwoItems are there any {Format} with the title {MusicGroup}
+startSearchTwoItems are there any {Format} with the title {MusicRecording}
+startSearchTwoItems are there any {Format} with the title {Musician}
+startSearchTwoItems are there any {Format} with the title {Organization}
+startSearchTwoItems are there any {Format} with the title {Person}
+startSearchTwoItems are there any {Format} with the title {Region}
+startSearchTwoItems are there any {Format} with the title {Sport}
+startSearchTwoItems are there any {Format} with the title {SportsEvent}
+startSearchTwoItems are there any {Format} with the title {SportsTeam}
+startSearchTwoItems are there any {Format} with the title {UsState}
+startSearchTwoItems are there any {Format} with the title {Animal} available
+startSearchTwoItems are there any {Format} with the title {Athlete} available
+startSearchTwoItems are there any {Format} with the title {Author} available
+startSearchTwoItems are there any {Format} with the title {Book} available
+startSearchTwoItems are there any {Format} with the title {City} available
+startSearchTwoItems are there any {Format} with the title {Comic} available
+startSearchTwoItems are there any {Format} with the title {Country} available
+startSearchTwoItems are there any {Format} with the title {Festival} available
+startSearchTwoItems are there any {Format} with the title {FictionalCharacter} available
+startSearchTwoItems are there any {Format} with the title {Game} available
+startSearchTwoItems are there any {Format} with the title {Genre} available
+startSearchTwoItems are there any {Format} with the title {Landform} available
+startSearchTwoItems are there any {Format} with the title {Language} available
+startSearchTwoItems are there any {Format} with the title {Movie} available
+startSearchTwoItems are there any {Format} with the title {MusicAlbum} available
+startSearchTwoItems are there any {Format} with the title {MusicGroup} available
+startSearchTwoItems are there any {Format} with the title {MusicRecording} available
+startSearchTwoItems are there any {Format} with the title {Musician} available
+startSearchTwoItems are there any {Format} with the title {Organization} available
+startSearchTwoItems are there any {Format} with the title {Person} available
+startSearchTwoItems are there any {Format} with the title {Region} available
+startSearchTwoItems are there any {Format} with the title {Sport} available
+startSearchTwoItems are there any {Format} with the title {SportsEvent} available
+startSearchTwoItems are there any {Format} with the title {SportsTeam} available
+startSearchTwoItems are there any {Format} with the title {UsState} available
+
+
+
+
+
+
+
+
+FOR LATER USE IN ANOTHER FUNCTION
+
+
+
+look for a {} by {}
+look for a {} by {} is available
+look for a {} from {}
+look for a {} from {} is available
+are there any {} by {}
+are there any {} by {} available
+are there any {} from {}
+are there any {} from {} available
+
+
+
+

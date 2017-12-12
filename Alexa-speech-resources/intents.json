@@ -80,6 +80,247 @@
 				"name": "AgeGroup",
 				"type": "LIST_OF_AGE_GROUPS"
 			}]
+		},
+		{
+			"intent": "StartSearch",
+			"slots": [
+			{
+				"name": "Animal",
+				"type": "AMAZON.Animal"
+			},
+			{
+				"name": "Athlete",
+				"type": "AMAZON.Athlete"
+			},
+			{
+				"name": "Author",
+				"type": "AMAZON.Author"
+			},
+			{
+				"name": "Book",
+				"type": "AMAZON.Book"
+			},
+			{
+				"name": "City",
+				"type": "AMAZON.City"
+			},
+			{
+				"name": "Comic",
+				"type": "AMAZON.Comic"
+			},
+			{
+				"name": "Country",
+				"type": "AMAZON.Country"
+			},
+			{
+				"name": "Festival",
+				"type": "AMAZON.Festival"
+			},
+			{
+				"name": "FictionalCharacter",
+				"type": "AMAZON.FictionalCharacter"
+			},
+			{
+				"name": "Game",
+				"type": "AMAZON.Game"
+			},
+			{
+				"name": "Genre",
+				"type": "AMAZON.Genre"
+			},
+			{
+				"name": "Landform",
+				"type": "AMAZON.Landform"
+			},
+			{
+				"name": "Language",
+				"type": "AMAZON.Language"
+			},
+			{
+				"name": "Movie",
+				"type": "AMAZON.Movie"
+			},
+			{
+				"name": "MusicAlbum",
+				"type": "AMAZON.MusicAlbum"
+			},
+			{
+				"name": "MusicGroup",
+				"type": "AMAZON.MusicGroup"
+			},
+			{
+				"name": "MusicRecording",
+				"type": "AMAZON.MusicRecording"
+			},
+			{
+				"name": "Musician",
+				"type": "AMAZON.Musician"
+			},
+			{
+				"name": "Organization",
+				"type": "AMAZON.Organization"
+			},
+			{
+				"name": "Person",
+				"type": "AMAZON.Person"
+			},
+			{
+				"name": "Region",
+				"type": "AMAZON.Region"
+			},
+			{
+				"name": "Sport",
+				"type": "AMAZON.Sport"
+			},
+			{
+				"name": "SportsEvent",
+				"type": "AMAZON.SportsEvent"
+			},
+			{
+				"name": "SportsTeam",
+				"type": "AMAZON.SportsTeam"
+			},
+			{
+				"name": "UsState",
+				"type": "AMAZON.UsState"
+			}]
+		}
+		{
+		"intent": "GetFormatType",
+		"slots": [
+		{
+			"name": "Format",
+			"type": "LIST_OF_FORMATS"
+		}]
+		},
+		{
+		"intent": "GetItemCategory",
+		"slots": [
+		{
+			"name": "ItemCategory",
+			"type": "LIST_OF_BOOK_TYPES"
+		}]
+		},
+		{
+		"intent": "GetLanguage",
+		"slots": [
+		{
+			"name": "Language",
+			"type": "LIST_OF_LANGUAGES"
+		}]
+		},
+		{
+		"intent": "startSearchTwoItems",
+		"slots": [
+		{
+			"name": "Animal",
+			"type": "AMAZON.Animal"
+		},
+		{
+			"name": "Athlete",
+			"type": "AMAZON.Athlete"
+		},
+		{
+			"name": "Author",
+			"type": "AMAZON.Author"
+		},
+		{
+			"name": "Book",
+			"type": "AMAZON.Book"
+		},
+		{
+			"name": "City",
+			"type": "AMAZON.City"
+		},
+		{
+			"name": "Comic",
+			"type": "AMAZON.Comic"
+		},
+		{
+			"name": "Country",
+			"type": "AMAZON.Country"
+		},
+		{
+			"name": "Festival",
+			"type": "AMAZON.Festival"
+		},
+		{
+			"name": "FictionalCharacter",
+			"type": "AMAZON.FictionalCharacter"
+		},
+		{
+			"name": "Game",
+			"type": "AMAZON.Game"
+		},
+		{
+			"name": "Genre",
+			"type": "AMAZON.Genre"
+		},
+		{
+			"name": "Landform",
+			"type": "AMAZON.Landform"
+		},
+		{
+			"name": "Language",
+			"type": "AMAZON.Language"
+		},
+		{
+			"name": "Movie",
+			"type": "AMAZON.Movie"
+		},
+		{
+			"name": "MusicAlbum",
+			"type": "AMAZON.MusicAlbum"
+		},
+		{
+			"name": "MusicGroup",
+			"type": "AMAZON.MusicGroup"
+		},
+		{
+			"name": "MusicRecording",
+			"type": "AMAZON.MusicRecording"
+		},
+		{
+			"name": "Musician",
+			"type": "AMAZON.Musician"
+		},
+		{
+			"name": "Organization",
+			"type": "AMAZON.Organization"
+		},
+		{
+			"name": "Person",
+			"type": "AMAZON.Person"
+		},
+		{
+			"name": "Region",
+			"type": "AMAZON.Region"
+		},
+		{
+			"name": "Sport",
+			"type": "AMAZON.Sport"
+		},
+		{
+			"name": "SportsEvent",
+			"type": "AMAZON.SportsEvent"
+		},
+		{
+			"name": "SportsTeam",
+			"type": "AMAZON.SportsTeam"
+		},
+		{
+			"name": "UsState",
+			"type": "AMAZON.UsState"
+		},
+		{
+			"name": "Format",
+			"type": "LIST_OF_FORMATS"
+		},
+		{
+			"name": "Language",
+			"type": "LIST_OF_LANGUAGES"
+		}]
 		}
 	]
 }
+

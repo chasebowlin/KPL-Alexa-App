@@ -32,9 +32,6 @@ var hoursArray = [];
 var eventsArray = [];
 const phoneNumber = "262-564-6100";
 
-//this string will hold all the information needed to search the catalog for the user specified item
-var searchString;
-
 
 //This function goes to the KPL Website and grabs all the necissary data from it
 //========================================================================================
@@ -286,7 +283,7 @@ function GetWeeklyHours(intent, session, callback) {
 	let repromptText = '';
 	let speechOutput = '';
 	let sessionAttributes = {};
-	const shouldEndSession = false;
+	const shouldEndSession = true;
 
 
 
@@ -345,7 +342,7 @@ function GetCertainHours(intent, session, callback) {
 	let speechOutput = '';
 	const requestedDay = intent.slots.Day;
 	const branch = intent.slots.Branch;
-	const shouldEndSession = false;
+	const shouldEndSession = true;
 
 	if(branch && requestedDay) {
 		speechOutput = "The hours for " + branch.value + " on " + requestedDay.value + " are... ";
@@ -426,7 +423,7 @@ function GetBranchAddress(intent, session, callback) {
 	let repromptText = '';
 	let speechOutput = '';
 	let sessionAttributes = {};
-	const shouldEndSession = false;
+	const shouldEndSession = true;
 
 	//check to see if they specified a branch
 	if(branch) {
@@ -459,7 +456,7 @@ function GetPhoneNumber(intent, session, callback) {
 	let repromptText = '';
 	let speechOutput = '';
 	let sessionAttributes = {};
-	let shouldEndSession = false;
+	let shouldEndSession = true;
 
 	//check to see if they specified a branch
 	if(branch.value) {
@@ -506,7 +503,7 @@ function GetEventsForDate(intent, session, callback) {
 	let repromptText = '';
 	let speechOutput = '';
 	let sessionAttributes = {};
-	const shouldEndSession = false;
+	const shouldEndSession = true;
 
 	var wantedDate = inputDate.value;
 
@@ -636,7 +633,7 @@ function GetEventForBranch (intent, session, callback) {
 	let repromptText = '';
 	let speechOutput = '';
 	let sessionAttributes = {};
-	const shouldEndSession = false;
+	const shouldEndSession = true;
 
 	//if the user did define a branch to search for
 	if(branchSlot) {
@@ -671,7 +668,7 @@ function GetEventsForAgeGroup (intent, session, callback) {
 	let repromptText = '';
 	let speechOutput = '';
 	let sessionAttributes = {};
-	const shouldEndSession = false;
+	const shouldEndSession = true;
 
 	//if the user did define an age group to search for
 	if(ageGroup) {
@@ -700,26 +697,608 @@ function GetEventsForAgeGroup (intent, session, callback) {
 
 //========================================================================================
 
+/*
+	maybe someday this code will be able to be used. for the time being, this part of the app is a 
+	webscraper that searches the online catalog for what ever the user specified
+
+	the problem is that when the application trys to interact with the catalog website, the connection
+	is not accepted well and the website returns an error.
+
+	How this webscraper was working was by creating a custom URL that has specific parts that are used
+	narrow and search for items in the catalog. I studied how the website constructed this and made sure
+	that they were all constructed the right way, but it has failed. 
+	
 //these functions allow the user to search through the online catalog to see if items are available
 //========================================================================================
 function StartSearch(intent, session, callback) {
 	const cardTitle = intent.name;
-	let searchKeyPhrase = intent.slots; //takes in what ever the key phrase / word the user is going to search
+	let searchSlot = intent.slots; //takes in what ever the key phrase / word the user is going to search
 	let repromptText = '';
 	let speechOutput = '';
 	let sessionAttributes = {};
 	const shouldEndSession = false;
 
-	if(searchKeyPhrase) {
-		speechOutput = 'jajajaj'
+	var searchKeyPhrase
+	//check to make sure that the user entered in one of the many different slot types the user can use to search
+	//if they did then save its value
+	if (searchSlot.Animal.value) {
+		searchKeyPhrase = searchSlot.Animal;
 	}
+	else if (searchSlot.Athlete.value) {
+		searchKeyPhrase = searchSlot.Athlete;
+	}
+	else if (searchSlot.Author.value) {
+		searchKeyPhrase = searchSlot.Author;
+	}
+	else if (searchSlot.Book.value) {
+		searchKeyPhrase = searchSlot.Book;
+	}
+	else if (searchSlot.City) {
+		searchKeyPhrase = searchSlot.City;
+	}
+	else if (searchSlot.Comic.value) {
+		searchKeyPhrase = searchSlot.Comic;
+	}
+	else if (searchSlot.Country.value) {
+		searchKeyPhrase = searchSlot.Country;
+	}
+	else if (searchSlot.Festival.value) {
+		searchKeyPhrase = searchSlot.Festival;
+	}
+	else if (searchSlot.FictionalCharacter.value) {
+		searchKeyPhrase = searchSlot.FictionalCharacter;
+	}
+	else if (searchSlot.Game.value) {
+		searchKeyPhrase = searchSlot.Game;
+	}
+	else if (searchSlot.Genre.value) {
+		searchKeyPhrase = searchSlot.Genre;
+	}
+	else if (searchSlot.Landform.value) {
+		searchKeyPhrase = searchSlot.Landform;
+	}
+	else if (searchSlot.Movie.value) {
+		searchKeyPhrase = searchSlot.Movie;
+	}
+	else if (searchSlot.MusicAlbum.value) {
+		searchKeyPhrase = searchSlot.MusicAlbum;
+	}
+	else if (searchSlot.MusicGroup.value) {
+		searchKeyPhrase = searchSlot.MusicGroup;
+	}
+	else if (searchSlot.MusicRecording.value) {
+		searchKeyPhrase = searchSlot.MusicRecording;
+	}
+	else if (searchSlot.Game.value) {
+		searchKeyPhrase = searchSlot.Game;
+	}
+	else if (searchSlot.Musician.value) {
+		searchKeyPhrase = searchSlot.Musician;
+	}
+	else if (searchSlot.Organization.value) {
+		searchKeyPhrase = searchSlot.Organization;
+	}
+	else if (searchSlot.Person.value) {
+		searchKeyPhrase = searchSlot.Person;
+	}
+	else if (searchSlot.Sport.value) {
+		searchKeyPhrase = searchSlot.Sport;
+	}
+	else if (searchSlot.SportsEvent.value) {
+		searchKeyPhrase = searchSlot.SportsEvent;
+	}
+	else if (searchSlot.SportsTeam.value) {
+		searchKeyPhrase = searchSlot.SportsTeam;
+	}
+	
+	//if no user data was inputed, then reprompt them to give alexa something to search
+	else {
+		speechOutput = 'Please say a title, subject, or author that you would like to search for.';
+	}
+
+	//check to make sure that the user did enter in a valid value
+	if(typeof searchKeyPhrase.value !== 'undefined') {
+		//seperate out what the user wants to search and then add + inbetween the words
+		searchKeyPhrase = searchKeyPhrase.value;
+		searchKeyPhrase = searchKeyPhrase.replace(/ /g, "+");
+
+		//this string will hold all the information needed to search the catalog for the user specified item
+		var searchString = "ent.sharelibraries.info/client/en_US/kpl/search/results";
+		var titleURL;
+		var formatURL = sessionAttributes.formatURL;
+		var categoryURL = sessionAttributes.categoryURL;
+		var languageURL = sessionAttributes.languageURL;
+
+		//now add on the users information that was passed in to the search string + the nessisary URL info
+		titleURL = "?qu=";
+		titleURL += searchKeyPhrase;
+
+		//add the search string to be stored in the session attributes so that it can be passed to other functions
+		sessionAttributes = {"baseURL": searchString, "titleURL": titleURL, "formatURL": formatURL, "categoryURL": categoryURL, "languageURL": languageURL};
+
+
+		//have alexa prompt the user to input a format type
+		speechOutput = 'what type of format are you looking for?';
+		repromptText = 'I\'m sorry, but I did not hear a format type. Please enter in a format type. A response could be... a book, eVideo, large print, or any others offered by the library.';
+	}
+	else {
+		speechOutput = 'I\'m sorry, but that did not seem to be a valid search topic. Please try a different subject you would like to search for.';
+	}
+
+	
+	callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
 }
 
-//========================================================================================
+//---------------------------------------------------------------------
 
+function GetFormatType(intent, session, callback) {
+	const cardTitle = intent.name;
+	let formatSlot = intent.slots.Format; 
+	let repromptText = '';
+	let speechOutput = '';
+	let sessionAttributes = session.attributes;
+	const shouldEndSession = false;
+
+	//check to make sure that the user entered in a correct format
+	if(formatSlot.value) {
+		//replace the spaces with +
+		var format = formatSlot.value.replace(/ /g, "+");
+
+
+		//grab the search string from the session attributes
+		//decalare the new formatURL
+		var baseURL = sessionAttributes.baseURL;
+		var titleURL = sessionAttributes.titleURL;
+		var formatURL = "&pf=FORMAT%09Format%09";
+		var categoryURL = sessionAttributes.categoryURL;
+		var languageURL = sessionAttributes.languageURL;
+
+
+		//check what kind of format it is
+		//depending on what kind is how the URL is shaped
+		if(format === "book") {
+			formatURL  += "BOOK%09Books";
+		}
+		else if (format === "music+sound+recording") {
+			formatURL  += "MUSICSNDREC%09";
+			formatURL += format;
+		}
+		else if (format === "eBook") {
+			formatURL += "E_BOOK%09";
+			formatURL += format;
+		}
+		else if (format === "eAudiobook") {
+			formatURL += "E_SOUNDREC%09";
+			formatURL += format;
+		}
+		else if (format === "audio+disk") {
+			formatURL += "SOUNDDISC%09";
+			formatURL += format;
+		}
+		else if (format === "video+disk") {
+			formatURL += "VIDEODISK%09";
+			formatURL += format;
+		}
+		else if (format === "eVideo") {
+			formatURL += "E_VIDEO%09";
+			formatURL += format;
+		}
+		else if (format === "large+print") {
+			formatURL += "LARGEPRINT%09";
+			formatURL += format;
+		}
+		else if (format === "music") {
+			formatURL += "MUSIC%09";
+			formatURL += format;
+		}
+		else if (format === "regular+print") {
+			formatURL += "REGULARPRINT%09";
+			formatURL += format;
+		}
+
+		//update the session attributes
+		sessionAttributes = {"baseURL": baseURL, "titleURL": titleURL, "formatURL": formatURL, "categoryURL": categoryURL, "languageURL": languageURL, "format": format};
+
+
+		//if the format entered is a book
+		if(format === "book" || format === "large+print" || format === "regular+print") {
+			speechOutput = 'Is the work fiction or non fiction?';
+			repromptText = 'I\'m sorry, but I did not hear the type piece of literature it is. Please say fiction or nonfiction.';
+		}
+		else {
+			speechOutput = 'is this in a certain language. If not then just say search';
+			repromptText = 'I\'m sorry, but I did not hear the language the item is in. Please specify a language. If it does not matter the language then say no.';
+		}
+	}
+	//if they didn't enter in a correct format type, then prompt the
+	//user to try again
+	else {
+		speechOutput = 'I\'m sorry, but I didn\'t hear the type of format you are searching for. Please say the format that you want to search for.';
+		repromptText = 'I\'m sorry, but I didn\'t hear the type of format you are searching for. Please say the format that you want to search for. A response could be... a book, eVideo, large print, or any others offered by the library.';
+	}
+
+
+	callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+}
+
+//---------------------------------------------------------------------
+
+function GetItemCategory(intent, session, callback) {
+	const cardTitle = intent.name;
+	let category = intent.slots.ItemCategory; 
+	let repromptText = '';
+	let speechOutput = '';
+	let sessionAttributes = session.attributes;
+	const shouldEndSession = false;
+
+
+	//check to make sure that the user entered in fiction or nonfiction and that
+	//the format type they are looking for is either book, large print, or regular print
+	if(sessionAttributes.format === "book" || sessionAttributes.format === "large+print" || sessionAttributes.format === "regular+print") {
+		
+		//grab the data from the session attributes and
+		//define the CategoryURL
+		var baseURL = sessionAttributes.baseURL;
+		var titleURL = sessionAttributes.titleURL;
+		var formatURL = sessionAttributes.formatURL;
+		var categoryURL = "&qf=ITEMCAT1%09Item+Category+1%091%3A";
+		var languageURL = sessionAttributes.languageURL;
+
+
+		if(category.value === "fiction") {
+			categoryURL += "FICTION%09";
+			categoryURL += category.value;
+
+		}
+		else if(category.value === "nonfiction") {
+			categoryURL += "NONFICTION%09";
+			categoryURL += category.value;
+		}
+
+		//update the session attributes
+		sessionAttributes = {"baseURL": baseURL, "titleURL": titleURL, "formatURL": formatURL, "categoryURL": categoryURL, "languageURL": languageURL};
+
+		
+		speechOutput = 'is this in a certain language. If not then just say search';
+		repromptText = 'I\'m sorry, but I did not hear a response. Please say a language or say search if you want me to begin the search.';
+	}
+	else {
+		speechOutput = 'I\'m sorry, but that only works with books, large prints, and regular prints. You can give me a language or the type of format to use in the search or you can just say search.';
+		repromptText = 'I\'m sorry, I didn\'t hear what you said.';
+	}
+
+	callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+}
+
+//---------------------------------------------------------------------
+
+function GetLanguage(intent, session, callback) {
+	const cardTitle = intent.name;
+	let language = intent.slots.Language; 
+	let repromptText = '';
+	let speechOutput = '';
+	let sessionAttributes = session.attributes;
+	const shouldEndSession = false;
+
+
+	//check to see if they have entered in a language
+	if(language.value) {
+		//grab the data from the session attributes and
+		//define the CategoryURL
+		var baseURL = sessionAttributes.baseURL;
+		var titleURL = sessionAttributes.titleURL;
+		var formatURL = sessionAttributes.formatURL;
+		var categoryURL = sessionAttributes.categoryURL;
+		var languageURL = "&qf=LANGUAGE%09Language%09";
+			languageURL += language.value;
+		
+		if(language.value === "English") {
+			languageURL += "ENG%09"
+			languageURL += language.value;
+		}
+		else if(language.value === "Spanish") {
+			languageURL += "SPA%09"
+			languageURL += language.value;
+		}
+		else if(language.value === "Chinese") {
+			languageURL += "CHI%09"
+			languageURL += language.value;
+		}
+
+		//update the session attributes
+		sessionAttributes = {"baseURL": baseURL, "titleURL": titleURL, "formatURL": formatURL, "categoryURL": categoryURL, "languageURL": languageURL};
+	
+		speechOutput = 'If that is all the information you want to use to search, just say search or you can change certain parts of your search.';
+	}
+	else {
+		speechOutput = 'I\'m sorry, but that was not a valid language to search for. I understand, english, spanish, or you can begin the search by saying search.';
+		repromptText = 'I\'m sorry, I didn\'t hear you say anything.';
+	}
+
+	callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+}
+
+
+//---------------------------------------------------------------------
+
+//this function takes in two different items: a title and one of the other helpful search parts
+function startSearchTwoItems(intent, session, callback) {
+	const cardTitle = intent.name;
+	let searchSlot = intent.slots; 
+	let repromptText = '';
+	let speechOutput = '';
+	let sessionAttributes = session.attributes;
+	const shouldEndSession = false;
+
+	//this string will hold all the information needed to search the catalog for the user specified item
+	var baseURL = "ent.sharelibraries.info/client/en_US/kpl/search/results";
+
+	//get the title first
+	var searchKeyPhrase
+	//check to make sure that the user entered in one of the many different slot types the user can use to search
+	//if they did then save its value
+	if (searchSlot.Animal.value) {
+		searchKeyPhrase = searchSlot.Animal;
+	}
+	else if (searchSlot.Athlete.value) {
+		searchKeyPhrase = searchSlot.Athlete;
+	}
+	else if (searchSlot.Author.value) {
+		searchKeyPhrase = searchSlot.Author;
+	}
+	else if (searchSlot.Book.value) {
+		searchKeyPhrase = searchSlot.Book;
+	}
+	else if (searchSlot.City) {
+		searchKeyPhrase = searchSlot.City;
+	}
+	else if (searchSlot.Comic.value) {
+		searchKeyPhrase = searchSlot.Comic;
+	}
+	else if (searchSlot.Country.value) {
+		searchKeyPhrase = searchSlot.Country;
+	}
+	else if (searchSlot.Festival.value) {
+		searchKeyPhrase = searchSlot.Festival;
+	}
+	else if (searchSlot.FictionalCharacter.value) {
+		searchKeyPhrase = searchSlot.FictionalCharacter;
+	}
+	else if (searchSlot.Game.value) {
+		searchKeyPhrase = searchSlot.Game;
+	}
+	else if (searchSlot.Genre.value) {
+		searchKeyPhrase = searchSlot.Genre;
+	}
+	else if (searchSlot.Landform.value) {
+		searchKeyPhrase = searchSlot.Landform;
+	}
+	else if (searchSlot.Movie.value) {
+		searchKeyPhrase = searchSlot.Movie;
+	}
+	else if (searchSlot.MusicAlbum.value) {
+		searchKeyPhrase = searchSlot.MusicAlbum;
+	}
+	else if (searchSlot.MusicGroup.value) {
+		searchKeyPhrase = searchSlot.MusicGroup;
+	}
+	else if (searchSlot.MusicRecording.value) {
+		searchKeyPhrase = searchSlot.MusicRecording;
+	}
+	else if (searchSlot.Game.value) {
+		searchKeyPhrase = searchSlot.Game;
+	}
+	else if (searchSlot.Musician.value) {
+		searchKeyPhrase = searchSlot.Musician;
+	}
+	else if (searchSlot.Organization.value) {
+		searchKeyPhrase = searchSlot.Organization;
+	}
+	else if (searchSlot.Person.value) {
+		searchKeyPhrase = searchSlot.Person;
+	}
+	else if (searchSlot.Sport.value) {
+		searchKeyPhrase = searchSlot.Sport;
+	}
+	else if (searchSlot.SportsEvent.value) {
+		searchKeyPhrase = searchSlot.SportsEvent;
+	}
+	else if (searchSlot.SportsTeam.value) {
+		searchKeyPhrase = searchSlot.SportsTeam;
+	}
+	
+	//if no user data was inputed, then reprompt them to give alexa something to search
+	else {
+		speechOutput = 'Please say a title, subject, or author that you would like to search for.';
+	}
+
+	//check to make sure that the user did enter in a valid value
+	if(typeof searchKeyPhrase.value !== 'undefined') {
+		//seperate out what the user wants to search and then add + inbetween the words
+		searchKeyPhrase = searchKeyPhrase.value;
+		searchKeyPhrase = searchKeyPhrase.replace(/ /g, "+");
+
+
+		//now add on the users information that was passed in to the search string + the nessisary URL info
+		var titleURL = "?qu=";
+		titleURL += searchKeyPhrase;
+	}
+	//FINISH FIXING THIS TO WORK WITH BOOKS SPEECHLET 0UTPUT AND MAKE SURE THAT ALL FORMATS ARE FIXED TO BE SOMETHING+SOMETHING
+
+	var secondSearchPhrase
+	var secondURL
+	//grab the second item
+	if (searchSlot.Format) {
+		//SET UP THE URLS FOR THE SPECIFIC SECOND SEARCH PHARSE
+		secondSearchPhrase = searchSlot.Format.value;
+
+		secondURL = "&pf=FORMAT%09Format%09";
+
+		//check what kind of format it is
+		//depending on what kind is how the URL is shaped
+		if(secondSearchPhrase === "book") {
+			secondURL  += "BOOK%09Books";
+		}
+		else if (secondSearchPhrase === "music+Sound+recording") {
+			secondURL  += "MUSICSNDREC%09";
+			secondURL += secondSearchPhrase;
+		}
+		else if (secondSearchPhrase === "eBook") {
+			secondURL += "E_BOOK%09";
+			secondURL += secondSearchPhrase;
+		}
+		else if (secondSearchPhrase === "eAudiobook") {
+			secondURL += "E_SOUNDREC%09";
+			secondURL += secondSearchPhrase;
+		}
+		else if (secondSearchPhrase === "audio+disk") {
+			secondURL += "SOUNDDISC%09";
+			secondURL += secondSearchPhrase;
+		}
+		else if (secondSearchPhrase === "video+disk") {
+			secondURL += "VIDEODISK%09";
+			secondURL += secondSearchPhrase;
+		}
+		else if (secondSearchPhrase === "eVideo") {
+			secondURL += "E_VIDEO%09";
+			secondURL += secondSearchPhrase;
+		}
+		else if (secondSearchPhrase === "large+print") {
+			secondURL += "LARGEPRINT%09";
+			secondURL += secondSearchPhrase;
+		}
+		else if (secondSearchPhrase === "music") {
+			secondURL += "MUSIC%09";
+			secondURL += secondSearchPhrase;
+		}
+		else if (secondSearchPhrase === "regular+print") {
+			secondURL += "REGULARPRINT%09";
+			secondURL += secondSearchPhrase;
+		}
+	
+		sessionAttributes = {"baseURL": baseURL, "titleURL": titleURL, "formatURL": secondURL};
+	}
+
+	
+	
+	speechOutput = 'Is there any more details you can give me to help me search for that item? If not then just say search.';
+	repromptText = 'I\'m sorry, but I did not hear what you said.'
+
+
+	callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+}
+
+//---------------------------------------------------------------------
+
+function searchCatalog(intent, session, callback) {
+	const cardTitle = intent.name;
+	let slots = '';
+	let repromptText = '';
+	let speechOutput = '';
+	let sessionAttributes = session.attributes;
+	const shouldEndSession = true;
+
+
+	//first grab all of the session attributes and combine them to make
+	//the URL that will be used to search for the item
+	var https = "https://"
+	var baseURL = sessionAttributes.baseURL;
+	var titleURL = sessionAttributes.titleURL;
+	var formatURL = sessionAttributes.formatURL;
+	var categoryURL = sessionAttributes.categoryURL;
+	var languageURL = sessionAttributes.languageURL;
+
+	var catalogURL = https;
+
+	//check to make sure that each of the urls are defined
+	//if they are then add them to the string
+	if(typeof baseURL !== 'undefined') {
+		catalogURL += baseURL;
+		//the base URL must be set up for the function to work
+		//the rest are optional
+
+		//these variables will hold the user entered data
+		var title = "";
+		var format = "";
+		var category = "";
+		var language = "";
+
+		if(typeof titleURL !== 'undefined') {
+			catalogURL += titleURL;
+			title = titleURL.split("u=").pop();
+			title = title.replace('+', ' ');
+		}
+		if(typeof formatURL !== 'undefined') {
+			catalogURL += formatURL;
+			format = formatURL.split("%09").pop();
+			format = format.replace('+', ' ');
+		}
+		if(typeof categoryURL !== 'undefined') {
+			catalogURL += categoryURL;
+			category = catalogURL.split("%09").pop();
+		}
+		if(typeof languageURL !== 'undefined') {
+			catalogURL += languageURL;
+			language = languageURL.split("e%09").pop();
+		}
+	}
+	
+	console.log(catalogURL);
+
+	if(format === "Book" || format === "music Sound recording" || format === "audio disk" ||
+	   format === "video disk" || format === "large print" || format === "music" || format === "regularprint") {
+		catalogURL += "?av=0";
+	}
+
+	console.log('\n\n\n' + catalogURL + '\n\n\n');
+
+	var testURL = "https://ent.sharelibraries.info/client/en_US/kpl/search/results?qu=harry+potter";
+
+
+	request(testURL, function(error, response, html) {
+
+		setTimeout(function() {
+			//check to make sure there were no errors when connecting to the catalog
+			if(!error) {
+				console.log('\n\nsuccessfully connected to the CATALOG\n\n');
+
+				//next use the cheerio library on the returned html
+				var $ = cheerio.load(html);
+				console.log('made it passed load html\n');
+				var test =  $('body').html();//.find('#detailLink0').attr('href');
+				console.log('assigned the variable test = bodys html\n');
+				console.log('test should display here: ' + test);
+
+				//now that we have the cheerio object, go through
+				//and find if there is an item available by the specified search params
+				$('.results_wrapper').children().each(function(index, elem) {
+					var every_four = $(this);
+
+					console.log("penis");
+
+
+					every_four.children().first().children().each(function(index, elem) {
+						var data = this;
+
+						console.log("data.find('results_cell0').text()");
+					})
+
+				})
+			}
+			else if(error) {
+				console.log('\n\n\n' + error + '\n\n\n');
+			}
+		}, 5000);
+	});
+
+	callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+}
+//========================================================================================
+*/
 
 
 //the events
+
 //========================================================================================
 //this is called when the session starts
 function onSessionStarted(SessionStartedRequest, session) {
@@ -773,9 +1352,26 @@ function onIntent(intentRequest, session, callback) {
 	else if(intentName === 'GetEventsForAgeGroup') {
 		GetEventsForAgeGroup(intent, session, callback);
 	}
+	/*
 	else if(intentName === 'StartSearch') {
 		StartSearch(intent, session, callback);
 	}
+	else if(intentName === 'GetFormatType') {
+		GetFormatType(intent, session, callback);
+	}
+	else if(intentName === 'GetItemCategory') {
+		GetItemCategory(intent, session, callback);
+	}
+	else if(intentName === 'GetLanguage') {
+		GetLanguage(intent, session, callback);
+	}
+	else if(intentName === 'startSearchTwoItems') {
+		startSearchTwoItems(intent, session, callback);
+	}
+	else if(intentName === 'searchCatalog') {
+		searchCatalog(intent, session, callback)
+	}
+	*/
 	else {
 		throw new Error('Invalid intent');
 	}

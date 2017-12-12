@@ -1,0 +1,16 @@
+{
+  "name": "KPL-helper",
+  "version": "1.0.1",
+  "description": "Search the KPL website for upcoming and current events, times of the branches, and search to see if an item is available at the library",
+  "main": "server.js",
+  "author": "Chase Bowlin (chasebowlin96@gmail.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chasebowlin/KPL-Alexa-App"
+  },
+  "dependencies": {
+    "alexa-sdk": "^1.0.15",
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.83.0"
+  }
+}

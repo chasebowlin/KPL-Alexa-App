@@ -1,10 +1,10 @@
-book
+Book
 Music Sound Recording
-eBook
-eAudiobook
+e.Book
+e.Audiobook
 Audio disk
 Video disk
-eVideo
+e.Video
 Large print
 Music
 Regular print
